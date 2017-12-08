@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qj9-j6-9yz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller - Second-->
+        <scene sceneID="F8p-OS-VP2">
+            <objects>
+                <viewController title="Second" id="WTv-38-rMZ" customClass="DRSecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GJg-QE-9NK">
+                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="IcQ-Mz-CQ4">
+                                <items>
+                                    <navigationItem title="Scene - 2" id="9dg-7G-s5c">
+                                        <barButtonItem key="leftBarButtonItem" image="setting.png" id="bTA-aP-lK3">
+                                            <connections>
+                                                <segue destination="x0s-3F-fDd" kind="modal" modalTransitionStyle="flipHorizontal" id="VnA-kG-tWN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="refresh.png" id="xUL-eN-BY5">
+                                            <connections>
+                                                <action selector="myRefreshClicked:" destination="WTv-38-rMZ" id="KlN-EG-KsP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMS-Km-yIJ">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aMS-Km-yIJ" firstAttribute="leading" secondItem="GJg-QE-9NK" secondAttribute="leading" type="default" id="0jB-sq-vn7"/>
+                            <constraint firstItem="IcQ-Mz-CQ4" firstAttribute="top" secondItem="GJg-QE-9NK" secondAttribute="top" type="default" id="Cg6-w4-SUJ"/>
+                            <constraint firstItem="IcQ-Mz-CQ4" firstAttribute="leading" secondItem="GJg-QE-9NK" secondAttribute="leading" type="default" id="Sht-Ha-pjw"/>
+                            <constraint firstItem="aMS-Km-yIJ" firstAttribute="top" secondItem="IcQ-Mz-CQ4" secondAttribute="bottom" type="default" id="ad2-3h-6hB"/>
+                            <constraint firstItem="aMS-Km-yIJ" firstAttribute="bottom" secondItem="GJg-QE-9NK" secondAttribute="bottom" type="default" id="jKQ-qj-tP1"/>
+                            <constraint firstItem="IcQ-Mz-CQ4" firstAttribute="trailing" secondItem="GJg-QE-9NK" secondAttribute="trailing" type="default" id="lKQ-eL-HyJ"/>
+                            <constraint firstItem="aMS-Km-yIJ" firstAttribute="trailing" secondItem="GJg-QE-9NK" secondAttribute="trailing" type="default" id="tU7-l6-0xt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="circle.png" id="p4m-gA-yBX">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="myNavigationBar" destination="IcQ-Mz-CQ4" id="QRW-Ki-qa1"/>
+                        <outlet property="myNavigationTitle" destination="9dg-7G-s5c" id="5hS-Na-RJa"/>
+                        <outlet property="myRefresh" destination="xUL-eN-BY5" id="MYb-rN-rx5"/>
+                        <outlet property="myWebView" destination="aMS-Km-yIJ" id="zzN-Fj-BR0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVB-fy-g1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="407"/>
+        </scene>
+        <!--Settings New View Controller - Settings-->
+        <scene sceneID="Col-KI-rpZ">
+            <objects>
+                <viewController title="Settings" id="x0s-3F-fDd" customClass="DRSettingsNewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ams-AU-165">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrt-xF-0IG">
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="myCancelButton_TouchDown:" destination="x0s-3F-fDd" eventType="touchUpInside" id="EhT-OM-yJz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsW-TH-l7n">
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mySaveButton_TouchDown:" destination="x0s-3F-fDd" eventType="touchUpInside" id="e6k-oy-eMk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Page Title" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aGt-BT-bIV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="670" id="kPN-PB-B01"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="myTextFields_DidEndOrExit:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="r5b-9z-uFm"/>
+                                    <action selector="myTextFields_EditingDidBegin:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="C83-8v-gM3"/>
+                                    <action selector="myTextFields_EditingDidEnd:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="uSP-7p-evN"/>
+                                    <action selector="myTextFields_TouchUpOutSide:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="OUg-pH-LJw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="daI-zv-4gp">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="myTextFields_DidEndOrExit:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="hEJ-t7-Oz7"/>
+                                    <action selector="myTextFields_EditingDidBegin:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="f49-NQ-lG7"/>
+                                    <action selector="myTextFields_EditingDidEnd:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="zAF-4p-8dz"/>
+                                    <action selector="myTextFields_TouchUpOutSide:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="sZ3-HB-8XW"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Domain\User ( Optional Domain )" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8xv-mb-RfX">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="myTextFields_DidEndOrExit:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="Geq-gl-VgD"/>
+                                    <action selector="myTextFields_EditingDidBegin:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="Abt-PG-9Mz"/>
+                                    <action selector="myTextFields_EditingDidEnd:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="ufh-jg-6HN"/>
+                                    <action selector="myTextFields_TouchUpOutSide:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="rhQ-kS-qpD"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UH0-X1-J2a">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="myTextFields_DidEndOrExit:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="itH-tL-E1B"/>
+                                    <action selector="myTextFields_EditingDidBegin:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="cwv-G0-Kiw"/>
+                                    <action selector="myTextFields_EditingDidEnd:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="4eK-62-NJQ"/>
+                                    <action selector="myTextFields_TouchUpOutSide:" destination="x0s-3F-fDd" eventType="editingDidEnd" id="m79-yY-HPn"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="ynZ-1t-PsG">
+                                <connections>
+                                    <action selector="mySlider_ValueChanged:" destination="x0s-3F-fDd" eventType="valueChanged" id="CpL-XQ-NXD"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Disabled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-r7-qhg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HEj-3X-sOO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" white="0.75428427419999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Automatic Refresh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXX-mz-Dcc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="MwG-cT-9jb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxo-AN-91x">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="B5B-Eh-Gma"/>
+                                    <constraint firstAttribute="width" constant="421" id="N6o-e0-DsO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                <color key="textColor" white="0.90921118950000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UH0-X1-J2a" firstAttribute="leading" secondItem="8xv-mb-RfX" secondAttribute="leading" type="default" id="1rk-TG-Z0O"/>
+                            <constraint firstAttribute="bottom" secondItem="KsW-TH-l7n" secondAttribute="bottom" constant="51" id="2DX-mK-GgP"/>
+                            <constraint firstItem="ynZ-1t-PsG" firstAttribute="top" secondItem="ams-AU-165" secondAttribute="top" constant="427" id="3WL-SR-z7x"/>
+                            <constraint firstItem="Dxo-AN-91x" firstAttribute="trailing" secondItem="aGt-BT-bIV" secondAttribute="trailing" type="default" id="49M-4u-26q"/>
+                            <constraint firstItem="8xv-mb-RfX" firstAttribute="top" secondItem="daI-zv-4gp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4iz-t5-yn9"/>
+                            <constraint firstAttribute="bottom" secondItem="wrt-xF-0IG" secondAttribute="bottom" constant="108" id="5wa-EY-9GN"/>
+                            <constraint firstItem="ynZ-1t-PsG" firstAttribute="trailing" secondItem="vXX-mz-Dcc" secondAttribute="trailing" type="default" id="6UF-Yg-go3"/>
+                            <constraint firstItem="daI-zv-4gp" firstAttribute="trailing" secondItem="8xv-mb-RfX" secondAttribute="trailing" type="default" id="9nt-p0-vkP"/>
+                            <constraint firstItem="8xv-mb-RfX" firstAttribute="leading" secondItem="daI-zv-4gp" secondAttribute="leading" type="default" id="CLU-Q2-hvz"/>
+                            <constraint firstItem="vXX-mz-Dcc" firstAttribute="leading" secondItem="ynZ-1t-PsG" secondAttribute="leading" type="default" id="Ei6-Oh-Z1u"/>
+                            <constraint firstItem="aGt-BT-bIV" firstAttribute="top" secondItem="ams-AU-165" secondAttribute="top" constant="248" id="GhW-My-agi"/>
+                            <constraint firstItem="UH0-X1-J2a" firstAttribute="trailing" secondItem="Mes-r7-qhg" secondAttribute="trailing" type="default" id="Iub-ar-dOf"/>
+                            <constraint firstItem="Mes-r7-qhg" firstAttribute="trailing" secondItem="ynZ-1t-PsG" secondAttribute="trailing" type="default" id="JOZ-Z4-lRo"/>
+                            <constraint firstItem="aGt-BT-bIV" firstAttribute="trailing" secondItem="daI-zv-4gp" secondAttribute="trailing" type="default" id="MdG-pp-ckz"/>
+                            <constraint firstItem="vXX-mz-Dcc" firstAttribute="trailing" secondItem="wrt-xF-0IG" secondAttribute="trailing" type="default" id="N85-Of-Gyx"/>
+                            <constraint firstItem="UH0-X1-J2a" firstAttribute="trailing" secondItem="8xv-mb-RfX" secondAttribute="trailing" type="default" id="V8r-te-0rl"/>
+                            <constraint firstItem="UH0-X1-J2a" firstAttribute="leading" secondItem="Mes-r7-qhg" secondAttribute="leading" type="default" id="VMz-Vm-xEl"/>
+                            <constraint firstItem="vXX-mz-Dcc" firstAttribute="top" secondItem="ams-AU-165" secondAttribute="top" constant="456" id="ZgC-nU-Oby"/>
+                            <constraint firstItem="UH0-X1-J2a" firstAttribute="centerX" secondItem="ams-AU-165" secondAttribute="centerX" type="default" id="ajV-M4-ccg"/>
+                            <constraint firstItem="KsW-TH-l7n" firstAttribute="leading" secondItem="wrt-xF-0IG" secondAttribute="leading" type="default" id="cqs-bd-wnh"/>
+                            <constraint firstItem="KsW-TH-l7n" firstAttribute="trailing" secondItem="wrt-xF-0IG" secondAttribute="trailing" type="default" id="cxz-yo-gW4"/>
+                            <constraint firstItem="Mes-r7-qhg" firstAttribute="leading" secondItem="ynZ-1t-PsG" secondAttribute="leading" type="default" id="eGe-Mh-QAx"/>
+                            <constraint firstItem="daI-zv-4gp" firstAttribute="top" secondItem="aGt-BT-bIV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fgD-Zy-702"/>
+                            <constraint firstItem="Mes-r7-qhg" firstAttribute="top" secondItem="UH0-X1-J2a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="g3i-8p-5JP"/>
+                            <constraint firstItem="UH0-X1-J2a" firstAttribute="top" secondItem="8xv-mb-RfX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j6g-VY-nu6"/>
+                            <constraint firstItem="wrt-xF-0IG" firstAttribute="leading" secondItem="vXX-mz-Dcc" secondAttribute="leading" type="default" id="mkC-0a-CJx"/>
+                            <constraint firstItem="Dxo-AN-91x" firstAttribute="top" secondItem="ams-AU-165" secondAttribute="top" constant="93" id="nMz-vF-Tl1"/>
+                            <constraint firstItem="daI-zv-4gp" firstAttribute="leading" secondItem="aGt-BT-bIV" secondAttribute="leading" type="default" id="viK-Bm-yWO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myCancelButton" destination="wrt-xF-0IG" id="xXq-Qf-Byz"/>
+                        <outlet property="mySaveButton" destination="KsW-TH-l7n" id="tiH-Pk-xMi"/>
+                        <outlet property="mySlider" destination="ynZ-1t-PsG" id="cib-8h-3YY"/>
+                        <outlet property="mySliderLabel" destination="Mes-r7-qhg" id="vyc-ye-NCj"/>
+                        <outlet property="myTextPassword" destination="UH0-X1-J2a" id="kQL-Bp-zIZ"/>
+                        <outlet property="myTextTitle" destination="aGt-BT-bIV" id="xkQ-oi-LrA"/>
+                        <outlet property="myTextURL" destination="daI-zv-4gp" id="jHA-e0-W6o"/>
+                        <outlet property="myTextUser" destination="8xv-mb-RfX" id="VTF-2P-Mws"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVm-Im-nNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="1014"/>
+        </scene>
+        <!--Third View Controller - Third-->
+        <scene sceneID="iwL-JI-RNH">
+            <objects>
+                <viewController title="Third" id="8bm-rh-GnD" customClass="DRThirdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H68-OG-FA0">
+                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="xTu-6m-Nnx">
+                                <items>
+                                    <navigationItem title="Scene - 3" id="KgW-3l-X76">
+                                        <barButtonItem key="leftBarButtonItem" image="setting.png" id="fDK-iz-pdX">
+                                            <connections>
+                                                <segue destination="x0s-3F-fDd" kind="modal" modalTransitionStyle="flipHorizontal" id="nfQ-9J-i3l"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="refresh.png" id="vRu-MP-bkV">
+                                            <connections>
+                                                <action selector="myRefreshClicked:" destination="8bm-rh-GnD" id="JvO-iN-EQH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-zM-ltz">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z4l-zM-ltz" firstAttribute="top" secondItem="xTu-6m-Nnx" secondAttribute="bottom" type="default" id="5tw-Jm-bRK"/>
+                            <constraint firstItem="xTu-6m-Nnx" firstAttribute="trailing" secondItem="H68-OG-FA0" secondAttribute="trailing" type="default" id="EJ9-zb-mpd"/>
+                            <constraint firstItem="xTu-6m-Nnx" firstAttribute="leading" secondItem="H68-OG-FA0" secondAttribute="leading" type="default" id="Jv4-88-3d2"/>
+                            <constraint firstItem="xTu-6m-Nnx" firstAttribute="top" secondItem="H68-OG-FA0" secondAttribute="top" type="default" id="brC-jT-Yhb"/>
+                            <constraint firstItem="Z4l-zM-ltz" firstAttribute="trailing" secondItem="H68-OG-FA0" secondAttribute="trailing" type="default" id="ePk-fJ-BNa"/>
+                            <constraint firstItem="Z4l-zM-ltz" firstAttribute="bottom" secondItem="H68-OG-FA0" secondAttribute="bottom" type="default" id="pdn-NW-uan"/>
+                            <constraint firstItem="Z4l-zM-ltz" firstAttribute="leading" secondItem="H68-OG-FA0" secondAttribute="leading" type="default" id="xFB-11-rKE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="circle.png" id="WVx-Ha-99Q">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="myNavigationBar" destination="xTu-6m-Nnx" id="ler-ti-gHx"/>
+                        <outlet property="myNavigationTitle" destination="KgW-3l-X76" id="ewU-5X-FX7"/>
+                        <outlet property="myRefresh" destination="vRu-MP-bkV" id="UC3-Ab-2eF"/>
+                        <outlet property="myWebView" destination="Z4l-zM-ltz" id="271-jA-Z2K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWk-GL-l4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="1526"/>
+        </scene>
+        <!--First View Controller - First-->
+        <scene sceneID="AeW-Wi-ReR">
+            <objects>
+                <viewController title="First" id="B5l-4R-YdH" customClass="DRFirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rKs-i0-1d0">
+                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="TPW-bz-SfK">
+                                <items>
+                                    <navigationItem title="Scene - 1" id="AAy-ii-Dmc">
+                                        <barButtonItem key="leftBarButtonItem" image="setting.png" id="3Jg-lG-cHT">
+                                            <connections>
+                                                <segue destination="x0s-3F-fDd" kind="modal" modalTransitionStyle="flipHorizontal" id="D0Q-uw-8sU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="refresh.png" id="PmI-sh-9da">
+                                            <connections>
+                                                <action selector="myRefreshClicked:" destination="B5l-4R-YdH" id="9WH-lV-EGA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1x-Fm-TJC">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J1x-Fm-TJC" firstAttribute="leading" secondItem="rKs-i0-1d0" secondAttribute="leading" type="default" id="7r3-ga-q2R"/>
+                            <constraint firstItem="J1x-Fm-TJC" firstAttribute="top" secondItem="TPW-bz-SfK" secondAttribute="bottom" type="default" id="M9b-df-Ud3"/>
+                            <constraint firstItem="J1x-Fm-TJC" firstAttribute="bottom" secondItem="rKs-i0-1d0" secondAttribute="bottom" type="default" id="O3s-PB-qZu"/>
+                            <constraint firstItem="TPW-bz-SfK" firstAttribute="leading" secondItem="rKs-i0-1d0" secondAttribute="leading" type="default" id="XVp-Lr-gRn"/>
+                            <constraint firstItem="J1x-Fm-TJC" firstAttribute="trailing" secondItem="rKs-i0-1d0" secondAttribute="trailing" type="default" id="aXR-Kf-tOc"/>
+                            <constraint firstItem="TPW-bz-SfK" firstAttribute="top" secondItem="rKs-i0-1d0" secondAttribute="top" type="default" id="oaX-6e-L2t"/>
+                            <constraint firstItem="TPW-bz-SfK" firstAttribute="trailing" secondItem="rKs-i0-1d0" secondAttribute="trailing" type="default" id="t7i-dA-tUL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="circle.png" id="OzG-nx-Gc9">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="myNavigationBar" destination="TPW-bz-SfK" id="b2a-ev-FGK"/>
+                        <outlet property="myNavigationTitle" destination="AAy-ii-Dmc" id="zxQ-yo-Nsc"/>
+                        <outlet property="myRefresh" destination="PmI-sh-9da" id="Ihh-kC-EX5"/>
+                        <outlet property="myWebView" destination="J1x-Fm-TJC" id="diP-2R-r14"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1n3-QN-ers" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="-702"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="45X-0J-bgf">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="Qj9-j6-9yz" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="VQF-ve-svh">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="B5l-4R-YdH" kind="relationship" relationship="viewControllers" id="13B-T0-XAI"/>
+                        <segue destination="WTv-38-rMZ" kind="relationship" relationship="viewControllers" id="8s9-mm-7F7"/>
+                        <segue destination="8bm-rh-GnD" kind="relationship" relationship="viewControllers" id="sCj-AT-vOp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAy-NK-WZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="-147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle.png" width="30" height="30"/>
+        <image name="refresh.png" width="16" height="16"/>
+        <image name="setting.png" width="16" height="16"/>
+    </resources>
+    <classes>
+        <class className="DRFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DRFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="myRefreshClicked:"/>
+                <relationship kind="outlet" name="myNavigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="myNavigationTitle" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="myRefresh" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="myWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DRSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DRSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="myRefreshClicked:"/>
+                <relationship kind="outlet" name="myNavigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="myNavigationTitle" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="myRefresh" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="myWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DRSettingsNewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DRSettingsNewViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="myCancelButton_TouchDown:"/>
+                <relationship kind="action" name="mySaveButton_TouchDown:"/>
+                <relationship kind="action" name="mySlider_ValueChanged:"/>
+                <relationship kind="outlet" name="myCancelButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mySaveButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mySlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="mySliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myTextPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myTextTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myTextURL" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myTextUser" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DRThirdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DRThirdViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="myRefreshClicked:"/>
+                <relationship kind="outlet" name="myNavigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="myNavigationTitle" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="myRefresh" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="myWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="nfQ-9J-i3l"/>
+    </inferredMetricsTieBreakers>
+</document>
